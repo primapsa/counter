@@ -4,10 +4,11 @@ import s from './Counter.module.css'
 type ButtonPropsType = {
     name: string
     callback: () => void
+    disabled: boolean
 }
-const Button = ({name, callback}: ButtonPropsType) => {
+const Button = ({name, callback, disabled}: ButtonPropsType) => {
     return (
-       <button className={s.button} onClick={callback}>{name}</button>
+       <button className={s.button} onClick={callback} disabled={disabled}>{name}</button>
     );
 };
 
